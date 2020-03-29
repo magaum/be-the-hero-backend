@@ -1,9 +1,11 @@
 const express = require('express');
-require('dotenv').config();
+const dotenv = require('dotenv')
 const routes = require('./routes');
 const cors = require('cors');
 const { errors } = require('celebrate');
 const app = express();
+
+dotenv.config();
 
 app.use(cors());
 // define tipo de request esperado para aplicação
