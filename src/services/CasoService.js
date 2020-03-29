@@ -29,7 +29,7 @@ module.exports = {
         const [count] = await connection('casos')
             .count();
 
-        response.header('X-Total-Count', count["count(*)"]);
+        response.header('X-Total-Count', count["count"]);
 
         const casos = await connection('casos')
             .join("ongs", "ongs.id", "=", "casos.ong_id")
